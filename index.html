@@ -39,6 +39,36 @@
 	</script>
 </body>
 </html>
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Random Game Generator</title>
+  <script>
+    function generateRandomGame() {
+      // Array of game names or URLs
+      var games = [
+        "https://g.co/kgs/PJGz6e",
+        "https://www.coolmathgames.com/0-run",
+        "https://sites.google.com/site/slopeunblockedgamez/",
+        // Add more games here
+      ];
+
+      // Generate a random index
+      var randomIndex = Math.floor(Math.random() * games.length);
+
+      // Get the random game URL
+      var randomGame = games[randomIndex];
+
+      // Redirect to the random game
+      window.location.href = randomGame;
+    }
+  </script>
+</head>
+<body>
+  <h1>Random Game Generator</h1>
+  <button onclick="generateRandomGame()">Generate Random Game</button>
+</body>
+</html>
 
 
 
