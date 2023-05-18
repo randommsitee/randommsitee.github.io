@@ -6,15 +6,40 @@
 		body {
 			background-color: #288d3e;
 		}
+
+		h1, p, a {
+			color: rgb(7, 7, 7);
+			font-size: 16px;
+		}
+
+		a {
+			text-decoration: none;
+			transition: font-size 0.2s ease;
+			background-color: black;
+			padding: 5px;
+		}
+
+		a:hover {
+			font-size: 20px;
+		}
+
+		ul {
+			list-style-type: none;
+			padding: 0;
+		}
+
+		li {
+			margin-bottom: 10px;
+		}
 	</style>
 </head>
 <body>
 	<h1>Elijah's Website!</h1>
 	<p>Click on the links below to explore different pages:</p>
 	<ul>
-		<li><a href="school.html">School</a></li>
-		<li><a href="fun.html">Fun</a></li>
-		<li><a href="food.html">Food</a></li>
+		<li><a href="school.html" style="color: #FF0000;">School</a></li>
+		<li><a href="fun.html" style="color: #00FF00;">Fun</a></li>
+		<li><a href="food.html" style="color: #0000FF;">Food</a></li>
 	</ul>
 
 	<a href="https://www.redlandsusd.net/Domain/28">
@@ -26,6 +51,10 @@
 	<input type="number" id="guess" min="1" max="10">
 	<button onclick="checkGuess()">Guess</button>
 	<p id="result"></p>
+
+	<h1>Random Game Generator</h1>
+	<button onclick="generateRandomGame()">Generate Random Game</button>
+
 	<script>
 		function checkGuess() {
 			var guess = document.getElementById("guess").value;
@@ -36,39 +65,21 @@
 				document.getElementById("result").innerHTML = "Sorry, the number was " + randomNumber + ". Try again!";
 			}
 		}
+
+		function generateRandomGame() {
+			var games = [
+				"https://g.co/kgs/q7f5xM",
+				"https://www.coolmathgames.com/0-run",
+				"https://sites.google.com/site/slopeunblockedgamez/"
+				// Add more games here
+			];
+
+			var randomIndex = Math.floor(Math.random() * games.length);
+			var randomGame = games[randomIndex];
+			window.location.href = randomGame;
+		}
 	</script>
 </body>
 </html>
-<!DOCTYPE html>
-<html>
-<head>
-  <title>Random Game Generator</title>
-  <script>
-    function generateRandomGame() {
-      // Array of game names or URLs
-      var games = [
-        "https://g.co/kgs/PJGz6e",
-        "https://www.coolmathgames.com/0-run",
-        "https://sites.google.com/site/slopeunblockedgamez/",
-        // Add more games here
-      ];
 
-      // Generate a random index
-      var randomIndex = Math.floor(Math.random() * games.length);
-
-      // Get the random game URL
-      var randomGame = games[randomIndex];
-
-      // Redirect to the random game
-      window.location.href = randomGame;
-    }
-  </script>
-</head>
-<body>
-  <h1>Random Game Generator</h1>
-  <button onclick="generateRandomGame()">Generate Random Game</button>
-</body>
-</html>
-
-
-
+ 
