@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>My Simple Website</title>
+</head>
+<body>
+	<h1>Elijah's Website!</h1>
+	<p>Click on the links below to explore different pages:</p>
+	<ul>
+		<li><a href="school.html">School</a></li>
+		<li><a href="fun.html">Fun</a></li>
+		<li><a href="food.html">Food</a></li>
+	</ul>
+</body>
+</html>
+<!DOCTYPE html>
+<html>
+<head>
+	<title>My Website</title>
+	<link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+</body>
+</html>
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      body {
+        background-color: #288d3e;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>This is my website!</h1>
+    <p></p>
+  </body>
+  <a href="https://www.redlandsusd.net/Domain/28">
+	<img src="https://www.redlandsusd.net/cms/lib/CA01900901/Centricity/Template/GlobalAssets/images//Logos/CVHS_2022ImageNOBG200X120.png" alt="Citrus Valley High School" width="400" height="400">
+  </a>
+  <!DOCTYPE html>
+  <html>
+  <head>
+	  <title>My Website</title>
+	  <link rel="icon" href="https://www.redlandsusd.net/cms/lib/CA01900901/Centricity/Template/GlobalAssets/images//Logos/CVHS_2022ImageNOBG200X120.png" type="image/png">
+  </head>
+  <body>
+  </body>
+  </html>
+  <link rel="icon" href="favicon.ico" type="https://www.redlandsusd.net/cms/lib/CA01900901/Centricity/Template/GlobalAssets/images//Logos/CVHS_2022ImageNOBG200X120.png">
+
+  <!DOCTYPE html>
+<html>
+<head>
+	<title>Guess the Number Game</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<style>
+		body {
+			font-family: sans-serif;
+			text-align: center;
+		}
+		h1 {
+			margin-top: 50px;
+		}
+		input {
+			margin-top: 20px;
+			padding: 10px;
+			border-radius: 5px;
+			border: none;
+			box-shadow: 0 0 5px #ccc;
+		}
+		button {
+			margin-top: 20px;
+			padding: 10px;
+			border-radius: 5px;
+			border: none;
+			box-shadow: 0 0 5px #ccc;
+			cursor: pointer;
+		}
+	</style>
+</head>
+<body>
+	<h1>Guess the Number Game</h1>
+	<p>Guess a number between 1 and 10:</p>
+	<input type="number" id="guess" min="1" max="10">
+	<button onclick="checkGuess()">Guess</button>
+	<p id="result"></p>
+	<script>
+		function checkGuess() {
+			var guess = document.getElementById("guess").value;
+			var randomNumber = Math.floor(Math.random() * 10) + 1;
+			if (guess == randomNumber) {
+				document.getElementById("result").innerHTML = "Congratulations, you guessed the number!";
+			} else {
+				document.getElementById("result").innerHTML = "Sorry, the number was " + randomNumber + ". Try again!";
+			}
+		}
+	</script>
+</body>
+</html>
+
+

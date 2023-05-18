@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      body {
+        background-color: #288d3e;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>This Is About Fun!</h1>
+    <p></p>
+  </body>
+</html>
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Circle Clicker</title>
+	<style>
+		body {
+      background-color: #288d3e;
+		}
+		.circle {
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			width: 50px;
+			height: 50px;
+			background-color: #333;
+			border-radius: 50%;
+			cursor: pointer;
+			display: none;
+		}
+	</style>
+</head>
+<body>
+	<h1>Circle Clicker</h1>
+	<p>Click on the circle to score points!</p>
+	<p>Score: <span id="score">0</span></p>
+	<div class="circle"></div>
+	
+	<script>
+		let score = 0;
+		const scoreEl = document.getElementById("score");
+		const circle = document.querySelector(".circle");
+		
+		function showCircle() {
+			circle.style.display = "block";
+			const x = Math.random() * (window.innerWidth - 50);
+			const y = Math.random() * (window.innerHeight - 50);
+			circle.style.top = y + "px";
+			circle.style.left = x + "px";
+		}
+		
+		function hideCircle() {
+			circle.style.display = "none";
+		}
+		
+		function clickCircle() {
+			score++;
+			scoreEl.innerText = score;
+			hideCircle();
+		}
+		
+		circle.addEventListener("click", clickCircle);
+		
+		setInterval(function() {
+			showCircle();
+			setTimeout(hideCircle, 1000);
+		}, 2000);
+	</script>
+</body>
+</html>
